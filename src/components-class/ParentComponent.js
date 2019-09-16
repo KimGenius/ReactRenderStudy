@@ -8,8 +8,9 @@ class ParentComponent extends React.Component {
       parentValue: ''
     }
   }
+  // 해당 코드가 있으면 자식 컴포넌트에서도 render가 일어나지 않음
   shouldComponentUpdate(nextProps, nextState, nextContext) {
-    return this.props.parentValue !== nextProps.parentValue
+    return this.state.parentValue !== nextState.parentValue
   }
   render() {
     console.log('ParentComponent render')
