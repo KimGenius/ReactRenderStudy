@@ -8,6 +8,9 @@ class ParentComponent extends React.Component {
       parentValue: ''
     }
   }
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    return this.props.parentValue !== nextProps.parentValue
+  }
   render() {
     console.log('ParentComponent render')
     const { parentValue } = this.state
